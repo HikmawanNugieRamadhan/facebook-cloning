@@ -6,7 +6,7 @@ const ShortcutItem = ({ icon, label }) => {
       <img
         src={icon}
         alt={label}
-        className="w-12 h-8 object-cover rounded-md" // ← Persegi panjang & rapi
+        className="w-12 h-8 object-cover rounded-md"
       />
       <span className="text-sm">{label}</span>
     </div>

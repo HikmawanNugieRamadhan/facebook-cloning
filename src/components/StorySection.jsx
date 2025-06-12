@@ -1,13 +1,5 @@
 import React from "react";
-
-const stories = [
-  { name: "Me", image: "./assets/images/images.jpg" },
-  { name: "Luffy", image: "./assets/images/luffy.jpg" },
-  { name: "Naruto", image: "./assets/images/desa.jpg" },
-  { name: "Guts", image: "./assets/images/GutsBerserk.jpg" },
-  { name: "Isagi", image: "./assets/images/isagi.jpg" },
-];
-
+import { stories } from "../libs/variable";
 const StorySection = () => {
   return (
     <div className="flex overflow-x-auto space-x-4">

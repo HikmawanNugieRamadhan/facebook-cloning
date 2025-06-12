@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import SidebarLeft from "./components/SidebarLeft";
 import ContactItem from "./components/ContactItem";
 import FriendRequestItem from "./components/FriendRequestItem";
+import { contacts } from "./libs/variable";
 
 function App() {
   return (
@@ -78,11 +79,7 @@ function App() {
           <div>
             <div className="font-semibold text-gray-600 mb-2">Contacts</div>
             <div className="flex flex-col gap-2">
-              <ContactItem name="Luffy" />
-              <ContactItem name="Naruto" />
-              <ContactItem name="Guts" />
-              <ContactItem name="Griffith" />
-              <ContactItem name="Isagi" />
+              <ContactItem name={contacts} />
             </div>
           </div>
         </aside>

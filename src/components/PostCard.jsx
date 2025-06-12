@@ -22,7 +22,7 @@ const PostCard = ({ name, avatar, time, text, image }) => {
       {/* Image */}
       {image && (
         <img
-          src="./assets/images/Aokiji-sehat.jpg" // ← ganti juga ke image kamu
+          src="./assets/images/Aokiji-sehat.jpg"
           alt="Post"
           className="w-full rounded-lg object-cover max-h-[400px]"
         />

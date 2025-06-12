@@ -1,6 +1,7 @@
 import React from "react";
 import SidebarItem from "./SidebarItem";
 import ShortcutItem from "./ShortcutItem";
+import { sidebarGroup, sidebarMenus } from "../libs/variable";
 
 const SidebarLeft = () => {
   return (
@@ -10,20 +11,17 @@ const SidebarLeft = () => {
 
       {/* Menu */}
       <div className="flex flex-col gap-1">
-        <SidebarItem icon="./assets/icons/clock.svg" label="Watch" />
-        <SidebarItem icon="./assets/icons/events.svg" label="Events" />
-        <SidebarItem icon="./assets/icons/friend.svg" label="Friends" />
-        <SidebarItem icon="./assets/icons/memories.svg" label="Memories" />
-        <SidebarItem icon="./assets/icons/birthday.svg" label="Birthday" />
-        <SidebarItem icon="./assets/icons/games.svg" label="Games" />
+        {sidebarMenus.map((item, index) => (
+          <SidebarItem key={index} icon={item.icon} label={item.label} />
+        ))}
       </div>
 
       {/* Shortcuts */}
       <div className="pt-4 border-t font-semibold text-gray-600">Shortcuts</div>
       <div className="flex flex-col gap-1">
-        <ShortcutItem icon="./assets/group/untag.jpg" label="Universitas 17 Agustus 1945 Surabaya" />
-        <ShortcutItem icon="./assets/group/grup-bluelok.jpg" label="Futsal Kampung" />
-        <ShortcutItem icon="./assets/group/barcelona.jpg" label="FC Barcelona" />
+        {sidebarGroup.map((item, index) => (
+          <ShortcutItem key={index} icon={item.icon} label={item.label} />
+        ))}
       </div>
 
     </aside>
