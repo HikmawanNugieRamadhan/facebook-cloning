@@ -6,7 +6,9 @@ import Header from "./components/Header";
 import SidebarLeft from "./components/SidebarLeft";
 import ContactItem from "./components/ContactItem";
 import FriendRequestItem from "./components/FriendRequestItem";
+import FriendRequestList from "./components/FriendRequestList";
 import { contacts } from "./libs/variable";
+import { posts } from "./libs/variable";
 
 function App() {
   return (
@@ -26,13 +28,10 @@ function App() {
           <div className="mb-4">
             <CreatePost />
           </div>
-          <PostCard
-            name="Aokiji Sans Jr."
-            avatar="https://picsum.photos/seed/fiona/40"
-            time="5 hrs ago"
-            text="Car Free Day dulu gans"
-            image="./assets/images/Aokiji-sehat.jpg"
-          />
+          {posts.map((post, i) => (
+            <PostCard key={i} {...post} />
+          ))}
+
         </main>
 
         {/* Sidebar Kanan */}
@@ -55,15 +54,9 @@ function App() {
 
           {/* Friend Requests */}
           <div>
-            <div className="font-semibold text-gray-600 mb-2">Friend Requests</div>
-            <FriendRequestItem
-              name="Zoro"
-              avatar="https://picsum.photos/seed/tom/40"
-            />
-            <FriendRequestItem
-              name="Sanji"
-              avatar="https://picsum.photos/seed/anna/40"
-            />
+            <div className="p-4">
+              <FriendRequestList />
+            </div>
           </div>
 
           {/* Birthdays */}

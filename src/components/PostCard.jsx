@@ -6,7 +6,7 @@ const PostCard = ({ name, avatar, time, text, image }) => {
       {/* Header */}
       <div className="flex items-center space-x-3 mb-2">
         <img
-          src="./assets/images/Aokiji-pp.jpg"
+          src={avatar}
           alt={name}
           className="w-10 h-10 rounded-full object-cover"
         />
@@ -22,7 +22,7 @@ const PostCard = ({ name, avatar, time, text, image }) => {
       {/* Image */}
       {image && (
         <img
-          src="./assets/images/Aokiji-sehat.jpg"
+          src={image}
           alt="Post"
           className="w-full rounded-lg object-cover max-h-[400px]"
         />
